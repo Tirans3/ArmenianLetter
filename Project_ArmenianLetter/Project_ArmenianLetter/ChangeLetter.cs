@@ -13,16 +13,19 @@ namespace Project_ArmenianLetter
 
         public static string ChangeLetterMethod(string str)
         {
+            if (str == null)
+                throw new ArgumentNullException();
+            
+
             if (!str.Contains(' '))
             {
 
+              
+                
+              string[] temp = str.ToCharArray().Select(c => c.ToString().ToUpper()).ToArray();
 
-                var list1 = Enum.GetNames(typeof(Alphabet.Latin));
-                var list2 = Enum.GetNames(typeof(Alphabet.Armenian));
-                string[] temp1 = str.ToCharArray().Select(c => c.ToString().ToUpper()).ToArray();
-
-
-               return  temp1.Aggregate(" ", (a, b) => a + Enum.GetName(typeof(Alphabet.Armenian), Alphabet.AlphaBen[(Alphabet.Latin)Enum.Parse(typeof(Alphabet.Latin), b)]));
+                int x = 0;
+              return int.TryParse(str,out x) ?x.ToString():temp.Aggregate(" ", (a, b) => a + Enum.GetName(typeof(Alphabet.Armenian), Alphabet.AlphaBen[(Alphabet.Latin)Enum.Parse(typeof(Alphabet.Latin), b)]));
             }
             else
             {
