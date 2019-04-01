@@ -13,12 +13,14 @@ namespace Project_ArmenianLetter
 
         static void Main(string[] args)
         {
+           
+            
+                string s = Console.ReadLine();
 
-            string s = Console.ReadLine();
 
-
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.WriteLine(ChangeLetter.ChangeLetterMethod(s));
+                Console.OutputEncoding = Encoding.UTF8;
+                Console.WriteLine(ChangeLetter.ChangeLetterMethod(s));
+            
         }
     }
 }

@@ -45,7 +45,7 @@ namespace Project_ArmenianLetter
             { Latin.L,Armenian.Լ }, { Latin.W,Armenian.ՈՒ },
             { Latin.Z,Armenian.Զ }, { Latin.X,Armenian.Խ },
             { Latin.Y,Armenian.Յ }, { Latin.CH,Armenian.Չ },
-            { Latin.SH,Armenian.Շ },
+            { Latin.SH,Armenian.Շ },{ Latin.F,Armenian.Ֆ },
         };
 
 
