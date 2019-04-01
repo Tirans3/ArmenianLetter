@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project_ArmenianLetter
 {
-    class ChangeLetter
+    
+  public static  class ChangeLetter
     {
+       
+        public static string ChangeLetterMethod()
+        {
+
+        }
     }
 }
