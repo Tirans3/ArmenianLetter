@@ -13,8 +13,14 @@ namespace Project_ArmenianLetter
 
         static void Main(string[] args)
         {
-           
-            
+            string st = "dhfdh,reiouir;dsff";
+            string[] sd = st.Split(',', ';');
+            StringBuilder df = new StringBuilder(st);
+            foreach(var i in sd)
+            {
+                df.Replace(i," ghg");
+            }
+            Console.WriteLine(df);
                 string s = Console.ReadLine();
 
 

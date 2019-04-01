@@ -13,29 +13,33 @@ namespace Project_ArmenianLetter
 
         public static string ChangeLetterMethod(string str)
         {
-            if (str == null)
+            if (str == null ||str== " ")
                 throw new ArgumentNullException();
-            
 
-            if (!str.Contains(' '))
+            char[] delimiterChars = { ' ', ',', '.', ':', '\t','-','_' };
+
+            bool bools = delimiterChars.Any(s => str.Contains(s));
+
+            if (  !bools )
             {
 
               
                 
               string[] temp = str.ToCharArray().Select(c => c.ToString().ToUpper()).ToArray();
 
-                int x = 0;
-              return int.TryParse(str,out x) ?x.ToString():temp.Aggregate(" ", (a, b) => a + Enum.GetName(typeof(Alphabet.Armenian), Alphabet.AlphaBen[(Alphabet.Latin)Enum.Parse(typeof(Alphabet.Latin), b)]));
+                
+             return int.TryParse(str,out int x) ?x.ToString():temp.Aggregate(" ", (a, b) => a + Enum.GetName(typeof(Alphabet.Armenian), Alphabet.AlphaBen[(Alphabet.Latin)Enum.Parse(typeof(Alphabet.Latin), b)]));
             }
             else
             {
-                string s="";
-                string[] split = str.Split(' ');
-                foreach(var i in split)
+                
+                StringBuilder s =new StringBuilder(str);
+                string[] split = str.Split(' ', ',', '.', ':', '\t', '-', '_');
+                foreach (var i in split)
                 {
-                    s += ChangeLetterMethod(i) + " ";
+                    s.Replace(i, ChangeLetterMethod(i));
                 }
-                return s;
+                return s.ToString();
             }
         }
 
