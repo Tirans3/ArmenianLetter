@@ -12,10 +12,10 @@ namespace Project_ArmenianLetter
         
         public enum Latin
         {
-            A, B, C, D, E, F, G,
+            CH, SH, C, D, E, F, G,
             H, I, J, K, L, M, N,
             O, P, Q, R, S, T, U,
-            V, W, X, Z, Y,CH,SH,
+            V, W, X, Z, Y,A,B,
         }
 
 

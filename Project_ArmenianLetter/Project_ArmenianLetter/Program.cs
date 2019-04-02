@@ -13,19 +13,17 @@ namespace Project_ArmenianLetter
 
         static void Main(string[] args)
         {
-            string st = "dhfdh,reiouir;dsff";
-            string[] sd = st.Split(',', ';');
-            StringBuilder df = new StringBuilder(st);
-            foreach(var i in sd)
-            {
-                df.Replace(i," ghg");
-            }
-            Console.WriteLine(df);
+            Console.OutputEncoding = Encoding.UTF8;
+            
                 string s = Console.ReadLine();
+            
 
+               Console.WriteLine(EasyWithLinq.Translit(s));
 
-                Console.OutputEncoding = Encoding.UTF8;
-                Console.WriteLine(ChangeLetter.ChangeLetterMethod(s));
+            string t = Console.ReadLine();
+
+            Console.WriteLine(ChangeLetter.ChangeLetterMethod(t));
+                Console.ReadLine();
             
         }
     }

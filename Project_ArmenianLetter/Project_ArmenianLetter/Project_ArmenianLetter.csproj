@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Alphabet.cs" />
     <Compile Include="ChangeLetter.cs" />
+    <Compile Include="EasyWithLinq.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
