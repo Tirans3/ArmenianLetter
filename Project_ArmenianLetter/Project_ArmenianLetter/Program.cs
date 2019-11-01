@@ -13,7 +13,7 @@ namespace Project_ArmenianLetter
 
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("adad");
             Console.OutputEncoding = Encoding.UTF8;
             
                 string s = Console.ReadLine();
