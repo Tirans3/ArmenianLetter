@@ -13,6 +13,7 @@ namespace Project_ArmenianLetter
 
         static void Main(string[] args)
         {
+            Console.WriteLine("GHGGH");
             Console.OutputEncoding = Encoding.UTF8;
             
                 string s = Console.ReadLine();
