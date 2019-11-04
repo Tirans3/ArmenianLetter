@@ -13,7 +13,7 @@ namespace Project_ArmenianLetter
 
         static void Main(string[] args)
         {
-            Console.WriteLine("dsadsa");
+           
             Console.OutputEncoding = Encoding.UTF8;
             
                 string s = Console.ReadLine();
